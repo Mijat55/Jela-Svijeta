@@ -25,7 +25,6 @@ for ($i = 0; $i < 10; $i++) {
     DB::table('categories')->insert([
         'name' => $faker->word,
         'slug' => $faker->slug,
-        'image_url' => $faker->imageUrl(640, 480),
         'created_at' => now(),
         'updated_at' => now()
     ]);

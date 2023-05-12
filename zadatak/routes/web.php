@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\DishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,8 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    $dishes = DB::table('dishes')->get();
-    $categories = DB::table('categories')->get();
-    return view('welcome',[
-        'dishes' => $dishes,
-        'categories' => $categories
-    ]);
+   
+    return view('welcome');
 });
+
+Route::get('dishes', [DishController::class, 'index']);
