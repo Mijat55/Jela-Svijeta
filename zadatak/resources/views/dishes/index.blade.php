@@ -23,7 +23,7 @@
 
         </div>
         <div class="container mt-5 bg-white p-4 rounded shadow">
-            <div class="d-flex justify-content-between">
+         <div class="d-flex justify-content-between">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -33,11 +33,20 @@
                         </div>
                     </div>
                 </div>
-            <div>
+                
+                <div class="col-md-2 text-center">
+                <form class="form-inline ml-auto my-2 my-lg-0" type="get" action="{{ route('dishes.search') }}" method="GET">
+                    <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search"> 
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><span class=" fs-6 badge rounded-pill bg-success text-warning">Search</span></button>
+                </form>
+                </div>    
+                
+                    <div>
                 <span class="fs-6 badge rounded-pill bg-success text-warning">
                     Total Dishes: {{ count($dishes) }}
                 </span>
-            </div>
+            
+                </div>
             </div>
             <hr>
             <table class="table table-hover">

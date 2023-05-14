@@ -21,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::get('dishes', [DishController::class, 'index']);
+Route::get('/search', [DishController::class, 'index'])->name('dishes.search');
